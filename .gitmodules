@@ -1,0 +1,6 @@
+[submodule "AvionicsCloud.UI"]
+	path = AvionicsCloud.UI
+	url = https://github.com/xiaolait/AvionicsCloud.UI.git
+[submodule "EndDeviceService"]
+	path = EndDeviceService
+	url = https://github.com/lrxgyt/EndDevice.git
