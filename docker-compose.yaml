@@ -1,0 +1,30 @@
+version: '3'
+services:
+  redis:
+    image: redis
+    ports:
+      - '6379:6379'
+      
+  smp-impl-console:
+    image: smp-impl
+    depends_on:
+      - redis
+    privileged: true
+    ports:
+      - '20001:20001'
+    environment:
+      - CONSOLE_PORT=20001
+      - NEED_DEBUG=false
+      - REDIS_SERVER=172.18.67.183
+      
+  target-impl-console:
+    image: target-impl
+    depends_on:
+      - redis
+    privileged: true
+    ports:
+      - '20002:20002'
+    environment:
+      - CONSOLE_PORT=20002
+      - NEED_DEBUG=false
+      - REDIS_SERVER=172.18.67.183
