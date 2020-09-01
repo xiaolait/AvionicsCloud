@@ -4,3 +4,6 @@
 [submodule "EndDeviceService"]
 	path = EndDeviceService
 	url = https://github.com/lrxgyt/EndDevice.git
+[submodule "EndDevice"]
+	path = EndDevice
+	url = https://github.com/Lirx93/EndDevice.git
